@@ -1,0 +1,159 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		var symbol;
+		var button;
+		function generateButton()
+		{
+			for(symbol = 0; symbol < 10; symbol++)
+			{
+				document.getElementbyId("gb").innerHTML = symbol;
+			}
+		}
+	</script>
+</head>
+<body>
+<button type = "button" id = "gb" onclick="generateButton()">Generate Buttons</button>
+</body>
+</html> --> 
+
+
+
+
+<!-- Calculator program using HTML-->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>My Calculator</title>
+	<script>
+		var symbols = ['7', '8', '9', '*', '4', '5', '6', '-', '1', '2', '3', '+', 'C', '0', '=', '/'];
+		var lengthOfSymbols = symbols.length;
+		function generateButton()
+		{
+			document.body.appendChild(document.createElement("br"));
+			for(var symbol = 0; symbol < lengthOfSymbols; symbol++)
+			{
+			    var elem = document.createElement('input');
+			    elem.type = 'button';
+			    elem.value = symbols[symbol];
+				document.body.appendChild(elem);
+				if((symbol+1) % 4 == 0)
+				{
+			    	document.body.appendChild(document.createElement("br"));
+			    }
+			}
+			window.onclick = e =>
+			{
+				var textBox = document.getElementById("display");
+				if(e.target.value == "=")
+				{
+					var digit = textBox.value;
+					textBox.value = eval(digit);
+				}
+				else if(e.target.id == "gb")
+				{
+					e.target.style.display = "none";
+				}
+				else if(e.target.value == "C")
+				{
+					textBox.value = " ";
+				}
+				else if(symbols.includes(e.target.value))
+				{
+					textBox.value += e.target.value;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<label> CALCULATOR </label>
+	<br><br>
+	<input type = text id = "display">
+	<br><br>	
+	<button type = "button" id = "gb" onclick="generateButton()">Generate Buttons</button>
+</body>
+</html>
+ -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		// var button = "";
+		// var button = document.createElement('button');
+		// function myFunction(digit)
+		// {
+		// 	var a = digit;
+		// 	var b = digit;
+		// 	var c = digit + digit;
+		// 	document.write(c);
+		// }
+		function add(digit)
+		{
+		var a = digit;
+		var b = digit;
+		var c = digit + digit;
+		document.write(c);
+		// document.getElementbyId('gb').innerHTML= c;
+		}
+		function sub(digit)
+		{
+		var a = digit;
+		var b = digit;
+		var c = digit - digit;
+		document.write(c);
+		}
+		function mul(digit)
+		{
+		var a = digit;
+		var b = digit;
+		var c = digit * digit;
+		document.write(c);
+		}
+		function div(digit)
+		{
+		var a = digit;
+		var b = digit;
+		var c = digit / digit;
+		document.write(c);
+		}
+			 // a=Number(document.ao.bg.value);
+    //         b=Number(document.ao.bg.value)
+    //        c=a+b ;
+           // document.ao.gb.value=c;
+			// a = document.ao.
+			// var number1 = number(digit);
+			// var number2 = number(digit);
+			// var total = number1 + number2;
+			// document.getElementbyId('gb').innerHTML=digit + digit;
+		
+	</script>
+</head>
+<body>
+ <button type = "button" id = "gb" onclick="generateButton(6)">Generate Buttons</button> -->
+<!-- <button type = "button" id = "gb" onclick = "myFunction(8)">button</button> 
+<button type = "button" id = "gb" onclick = "add(8)">ADDITION</button>
+<button type = "button" id = "gb" onclick = "sub(8)">SUBTRACTION</button>
+<button type = "button" id = "gb" onclick = "mul(8)">MULTIPLICATION</button>
+<button type = "button" id = "gb" onclick = "div(8)">DIVISION</button>
+</body>
+</html>
+ -->
+
+
+ <!-- // for(var symbol = 0; symbol < symbolsLength; symbol++)
+			// {
+			// 	text += symbols[symbol];	
+			// 	// 	symbols[symbol];
+			// }
+			// 	// document.write = text;
+			// 	document.getElementById("gb").innerHTML = text;-->

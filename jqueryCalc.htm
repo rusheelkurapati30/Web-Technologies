@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Calculator</title>
+	<script src="jq/jquery.js"></script>
+	<script>
+		var symbols = ['7', '8', '9', '*', '4', '5', '6', '-', '1', '2', '3', '+', 'C', '0', '=', '/'];
+		var lengthOfSymbols = symbols.length;
+		function generateButtons()
+		{
+			$("<br>").appendTo(document.body);
+
+			for(var symbol = 0; symbol < lengthOfSymbols; symbol++)
+			{
+			    var elem = $('<input/>')[0];
+			    elem.value = symbols[symbol];
+			    elem.type ='button';
+
+			    $(elem).appendTo(document.body);
+				if((symbol+1) % 4 == 0)
+				{
+					$("<br>").appendTo(document.body);
+			    }
+			}
+
+			$(window).click(function(e)
+			{
+				var textBox = $("#display").get(0);
+				if(e.target.value == "=")
+				{
+					var digit = textBox.value;
+					textBox.value = eval(digit);
+				}
+				else if(e.target.value == "C")
+				{
+					textBox.value = " ";
+				}
+				else if(symbols.includes(e.target.value))
+				{
+					textBox.value += e.target.value;
+				}
+			})
+		}
+	</script>
+</head>
+<body onload="generateButtons()">
+	<label> CALCULATOR </label>
+	<br><br>
+	<input type = text id = "display">	
+</body>
+</html>
